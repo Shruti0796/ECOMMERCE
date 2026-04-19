@@ -1,0 +1,96 @@
+.payment-page { padding: 32px 0 60px; }
+.payment-layout { display: grid; grid-template-columns: 1fr 300px; gap: 28px; align-items: flex-start; }
+.checkout-section-title { font-family: var(--font-display); font-size: 24px; margin-bottom: 24px; }
+
+/* PAYMENT OPTIONS */
+.payment-options { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--white); }
+.payment-option { border-bottom: 1px solid var(--border); transition: background 0.2s; }
+.payment-option:last-child { border-bottom: none; }
+.payment-option.active { background: #fafbff; }
+
+.payment-option-header { display: flex; align-items: center; gap: 16px; padding: 18px 20px; cursor: pointer; }
+.payment-option-title { display: flex; align-items: center; gap: 12px; flex: 1; }
+.payment-option-title strong { font-size: 15px; display: block; margin-bottom: 2px; }
+.payment-option-title p { font-size: 12px; color: var(--text-muted); }
+.method-icon { font-size: 22px; }
+
+.upi-app-icons { display: flex; gap: 6px; font-size: 18px; }
+.card-scheme-icons { display: flex; gap: 6px; }
+.scheme-tag { padding: 3px 7px; border: 1px solid var(--border); border-radius: 4px; font-size: 10px; font-weight: 700; color: var(--text-muted); }
+.cod-badge { background: #fef3c7; color: var(--warning); font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 4px; white-space: nowrap; }
+
+.payment-option-body { padding: 4px 20px 20px 52px; }
+
+/* UPI */
+.upi-input-row { display: flex; align-items: flex-end; gap: 12px; }
+.verify-btn { white-space: nowrap; height: 44px; }
+.verify-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+.upi-verified-msg { background: #dcfce7; color: var(--success); padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-top: 12px; }
+
+/* CARD PREVIEW */
+.card-preview {
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+  border-radius: 16px; padding: 20px 24px; color: white; margin-bottom: 20px;
+  font-family: 'Courier New', monospace; min-height: 160px; position: relative;
+}
+.card-preview-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.card-chip { font-size: 20px; color: #ffd700; }
+.card-type-label { font-size: 14px; font-weight: 700; }
+.card-preview-number { font-size: 20px; letter-spacing: 3px; margin-bottom: 16px; word-spacing: 8px; }
+.card-preview-bottom { display: flex; justify-content: space-between; font-size: 13px; }
+.card-preview-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); margin-bottom: 2px; }
+
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cvv-input-wrap { position: relative; }
+.cvv-input-wrap input { padding-right: 60px; width: 100%; }
+.cvv-toggle { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--brand); font-size: 12px; font-weight: 600; cursor: pointer; }
+.cvv-info { margin-left: 4px; color: var(--text-muted); cursor: help; font-size: 12px; }
+.save-card-check { display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer; margin-bottom: 12px; }
+.save-card-check input { accent-color: var(--brand); width: 16px; height: 16px; }
+
+/* BANKS */
+.popular-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 10px; }
+.bank-option { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px; cursor: pointer; font-size: 14px; transition: background 0.15s; }
+.bank-option:hover { background: var(--bg); }
+.bank-option input { accent-color: var(--brand); }
+
+/* WALLET */
+.wallet-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.wallet-option { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.2s; }
+.wallet-option.selected { border-color: var(--brand); background: var(--brand-light); }
+.wallet-icon { font-size: 24px; }
+.wallet-info strong { display: block; font-size: 13px; }
+.wallet-info span { font-size: 11px; color: var(--text-muted); }
+
+.payment-note { font-size: 12px; color: var(--text-muted); background: var(--bg); padding: 10px 12px; border-radius: 6px; margin-top: 8px; }
+
+/* PAY BUTTON */
+.pay-btn-wrap { margin-top: 24px; }
+.pay-icons { display: flex; justify-content: center; gap: 16px; margin-top: 12px; font-size: 12px; color: var(--text-muted); }
+
+/* PROCESSING */
+.processing-screen { text-align: center; padding: 28px; }
+.spinner { width: 48px; height: 48px; border: 4px solid var(--border); border-top-color: var(--brand); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.processing-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+/* SIDEBAR */
+.payment-sidebar { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 140px; }
+.pay-total { font-size: 40px; font-weight: 700; color: var(--brand); margin: 16px 0; }
+.cod-note { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+.payment-assurance { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.assurance-item { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; font-size: 12px; color: var(--text-muted); }
+.assurance-item span:first-child { font-size: 20px; }
+
+/* PAYUP BRANDING */
+.payup-logo-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; text-align: center; }
+.payup-logo { font-size: 26px; font-weight: 900; letter-spacing: -1px; }
+.pay-p { color: var(--navy); font-family: var(--font-display); }
+.pay-up { color: var(--brand); font-family: var(--font-display); }
+
+@media (max-width: 768px) {
+  .payment-layout { grid-template-columns: 1fr; }
+  .payment-sidebar { position: static; }
+  .wallet-options { grid-template-columns: 1fr; }
+  .form-row-2 { grid-template-columns: 1fr; }
+}
