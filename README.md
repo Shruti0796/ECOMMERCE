@@ -29,7 +29,7 @@ The project is developed following **layered architecture** and strictly adheres
 - Stock management
 - Clean layered architecture
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Programming Language**: Java (JDK 21)
 - **Database**: MySQL 8.0
@@ -38,7 +38,7 @@ The project is developed following **layered architecture** and strictly adheres
 - **Frontend**: Java Swing (Modern GUI with card-based design)
 - **IDE**: VS Code / IntelliJ IDEA
 
-## 🎯 OOP Concepts Demonstrated
+## OOP Concepts Demonstrated
 
 - **Inheritance**: `Product` abstract class extended by `ElectronicsProduct` and `FashionProduct`
 - **Polymorphism**: Method overriding (`getProductTypeInfo()`)
@@ -47,7 +47,7 @@ The project is developed following **layered architecture** and strictly adheres
 - **Composition**: Order contains OrderItems
 - **Layered Architecture**: Model → DAO → Service → Presentation
 
-## 🗄️ Database
+## Database
 
 - MySQL Database (`ecom_db`)
 - Tables: `users`, `products`, `orders`, `order_items`
